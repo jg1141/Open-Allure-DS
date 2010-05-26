@@ -1,0 +1,23 @@
+
+¿Qué te parece
+hace que el cielo es azul?
+
+El color de la luz solar ; Verdadero. La luz solar contiene luz azul. Pero las nubes son de color blanco cuando el sol brilla sobre ellos. ¿Qué característica del cielo hace que sea azul?
+El color del cielo ; ¿La luna aparece azul en la noche? Sería si el aire era azul.
+Otra cosa ;; correcto.
+
+El cielo no siempre es azul.
+
+Es de color negro en la noche. ; Así que el color azul requiere la luz solar.
+Es de color naranja al atardecer. ; Así que el color azul requiere la luz del sol pase a través de relativamente poco, el aire limpio.
+Es de color blanco o gris en un día nublado. ; Así que el color azul depende de la vía aérea no está lleno de agua condensada.
+Es de color azul al mediodía en un día claro. ;; Y por otra parte, es de color azul en todas direcciones.
+
+¿Qué nos dice esto
+acerca de la luz azul
+que viene del sol?
+
+Esto se refleja; No. Esto haría que el color azul para ser más brillante en una dirección, tal como vemos el reflejo del sol en un espejo sólo desde un cierto ángulo.
+Es refractado; No, como la reflexión, esto haría que el color azul para doblar en una dirección, tal como vemos el color azul en un arco iris sólo desde un cierto ángulo.
+Es dispersos;; Correcto.
+[input];

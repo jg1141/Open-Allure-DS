@@ -1,0 +1,17 @@
+First question
+
+[next];;
+
+Second question
+
+Third ;; Should reach third question when selected
+[next];2 Should skip third question
+
+Third question
+
+[next];;
+
+Fourth question
+
+[next];-3 Back to start
+

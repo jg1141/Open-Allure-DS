@@ -1,0 +1,7 @@
+[listen = hn-listen.jpg]
+[smile  = hn-smile.jpg]
+[talk   = hn-talk.jpg]
+Second speaker (HN)
+
+Back to First Speaker ;[jg.txt]
+[input];;

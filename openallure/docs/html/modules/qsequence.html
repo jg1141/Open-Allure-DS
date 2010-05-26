@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>qsequence &mdash; OpenAllure v0.1d16dev (alpha) documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1d16dev (alpha)',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="OpenAllure v0.1d16dev (alpha) documentation" href="../index.html" />
+    <link rel="next" title="gesture" href="gesture.html" />
+    <link rel="prev" title="responses" href="responses.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../modindex.html" title="Global Module Index"
+             accesskey="M">modules</a> |</li>
+        <li class="right" >
+          <a href="gesture.html" title="gesture"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="responses.html" title="responses"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">OpenAllure v0.1d16dev (alpha) documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-qsequence">
+<h1><cite>qsequence</cite><a class="headerlink" href="#module-qsequence" title="Permalink to this headline">¶</a></h1>
+<p>qsequence.py
+a component of openallure.py</p>
+<p>Parses separate content file into question sequence object</p>
+<p><strong>Usage</strong></p>
+<p>QSequence( <em>filename</em> ) returns a question sequence object</p>
+<p><em>filename</em> can be either a local file or a URL containing preformatted text</p>
+<p>An input file is a plain text file with the format:</p>
+<div class="highlight-python"><pre>[ configuration overrides ]
+Question part1
+[ optional Question part2 ]
+[ optional blank line ]
+Answer 1 &lt;separator&gt; Response 1
+Answer 2 &lt;separator&gt; Response 2
+ etc ...
+up to 6 answers
+[ blank line ]
+Next question ...</pre>
+</div>
+<p>where configuration overrides can be:</p>
+<div class="highlight-python"><pre>smile            image to use for smiling avatar
+talk             image to use for talking avatar
+listen           image to use for listening avatar</pre>
+</div>
+<p>where Answer can be:</p>
+<div class="highlight-python"><pre>[link label]     to open link in separate browser when label is selected
+[input]          to enable user input
+[next]           to enable user input, but only until an automatic "page turn"</pre>
+</div>
+<p>where &lt;separator&gt; can be:</p>
+<div class="highlight-python"><pre>;                no action
+;; or ;1 or ;+1  advance to next question
+;-1              return to prior question ( in order exposed in sequence )
+;;; or ;2 or ;+2 advance two questions
+;[filename]      advance to first question found in filename
+;[url]           advance to first question found in text marked &lt;pre&gt; &lt;/pre&gt; at URL (webpage)</pre>
+</div>
+<p><strong>Output</strong></p>
+<p>List of lists:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#   [   The whole sequence of questions is outermost list,</span>
+<span class="c">#                             so seq[ 0 ] is everything about the first question</span>
+<span class="c">#    [  The parts of the a question including the question set, answer set, response set and action/destination sets are the next level list,</span>
+<span class="c">#                             so seq[ ][ 0 ] is the question set</span>
+<span class="c">#                                seq[ ][ 1 ] is the answer set</span>
+<span class="c">#                                seq[ ][ 2 ] is the response set</span>
+<span class="c">#                                seq[ ][ 3 ] is the action set</span>
+<span class="c">#                                seq[ ][ 4 ] is the action set destinations (Response-side filenames or URLs for new questions)</span>
+<span class="c">#                                seq[ ][ 5 ] is the links set (Answer-side filenames or URLs to open in browser)</span>
+<span class="c">#                                seq[ ][ 6 ] is the input set</span>
+<span class="c">#     [ The parts of the question are the next level list,</span>
+<span class="c">#                             so seq[ ][ 0 ][ 0 ] is the first part of the question, for example &quot;What color&quot;</span>
+<span class="c">#                            and seq[ ][ 0 ][ 1 ] is the next  part of the question, for example &quot;is the sky?&quot; ],</span>
+<span class="c">#     [ The answers are the next list,</span>
+<span class="c">#                             so seq[ ][ 1 ][ 0 ] is the first  answer, for example &quot;Black&quot;</span>
+<span class="c">#                            and seq[ ][ 1 ][ 1 ] is the second answer, for example &quot;Blue&quot; ],</span>
+<span class="c">#     [ The response are the next list,</span>
+<span class="c">#                             so seq[ ][ 2 ][ 0 ] is the first  response, for example &quot;Yes, at night.&quot;</span>
+<span class="c">#                            and seq[ ][ 2 ][ 1 ] is the second response, for example &quot;Yes, during the day.&quot; ],</span>
+<span class="c">#     [ The actions are the next list,</span>
+<span class="c">#                             so seq[ ][ 3 ][ 0 ] is the first  action, for example 0 ( meaning take no action )</span>
+<span class="c">#                            and seq[ ][ 3 ][ 1 ] is the second action, for example 1 ( meaning advance one question ) ],</span>
+<span class="c">#     [ The destinations are the next list,</span>
+<span class="c">#                             so seq[ ][ 4 ][ 0 ] is the first  destination, for example &#39;secondSetOfQuestions.txt&#39;</span>
+<span class="c">#                            and seq[ ][ 4 ][ 1 ] is the second destination, for example &#39;http://bit.ly/openalluretest&#39; ]]]</span>
+<span class="c">#     [ The links are the next list,</span>
+<span class="c">#                             so seq[ ][ 5 ][ 0 ] is the first  link, for example &#39;http://movieToWatch&#39;</span>
+<span class="c">#                            and seq[ ][ 5 ][ 1 ] is the second link, for example &#39;slidecastToWatch&#39; ]]]</span>
+<span class="c">#     [ The inputs are the next list,</span>
+<span class="c">#                             so seq[ ][ 6 ][ 0 ] is the first  input, for example 0 (indicating no input on this answer)</span>
+<span class="c">#                            and seq[ ][ 6 ][ 1 ] is the second link, for example 1 (indicating input allowed on this answer)</span>
+<span class="c">#     Special case for photos    seq[0][ 7 ] is list of smile/talk/listen photo names</span>
+</pre></div>
+</div>
+<p>See <a class="reference external" href="http://code.google.com/p/open-allure-ds/wiki/SeparateContentFileSyntax">Open Allure wiki</a> for details and examples.</p>
+<p>Copyright (c) 2010 John Graves</p>
+<p>MIT License: see LICENSE.txt</p>
+<dl class="class">
+<dt id="qsequence.QSequence">
+<em class="property">class </em><tt class="descclassname">qsequence.</tt><tt class="descname">QSequence</tt><big>(</big><em>filename=u'openallure.txt'</em>, <em>path=''</em>, <em>nltkResponse=None</em><big>)</big><a class="headerlink" href="#qsequence.QSequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Question Sequence contains (multiple) question blocks consisting of a question with answers/responses/actions</p>
+<dl class="method">
+<dt id="qsequence.QSequence.classify">
+<tt class="descname">classify</tt><big>(</big><em>strings</em><big>)</big><a class="headerlink" href="#qsequence.QSequence.classify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create list of string types:</p>
+<div class="highlight-python"><pre>Identify strings which contain new line only   ( type N )
+#             or which contain ; or ;; markers ( type indicated by offset of separator
+#                                                     between Answer ; Response )
+#             or else mark as question         ( type Q )</pre>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="qsequence.QSequence.regroup">
+<tt class="descname">regroup</tt><big>(</big><em>strings</em>, <em>string_types</em><big>)</big><a class="headerlink" href="#qsequence.QSequence.regroup" title="Permalink to this definition">¶</a></dt>
+<dd>Use string_types to sort strings into
+Questions, Answers, Responses and Subsequent Actions</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="responses.html"
+                                  title="previous chapter"><cite>responses</cite></a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="gesture.html"
+                                  title="next chapter"><cite>gesture</cite></a></p>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../modindex.html" title="Global Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gesture.html" title="gesture"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="responses.html" title="responses"
+             >previous</a> |</li>
+        <li><a href="../index.html">OpenAllure v0.1d16dev (alpha) documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2010, John Graves.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.5.
+    </div>
+  </body>
+</html>

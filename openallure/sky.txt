@@ -1,0 +1,29 @@
+What do you think
+makes the sky blue?
+
+The color of sunlight ; True. Sunlight contains blue light. But clouds are white when the sun shines on them. What feature of the sky makes it blue?
+The color of the air ; Does the moon appear blue at night? It would if the air was blue.
+Something else ;; Correct.
+
+The sky is not always blue.
+
+It is black at night. ; So the blue color requires sunlight.
+It is orange at sunset. ; So the blue color requires the sunlight to pass through relatively little, clean air.
+It is white or gray on a cloudy day. ; So the blue color depends on the air not being full of condensed water.
+It is blue at midday on a clear day. ;; And moreover, it is blue in every direction.
+
+What does this tell us
+about the blue light
+coming from the sun?
+
+It is reflected ; No.  This would cause the blue color to be brighter in one direction, just as we see a reflection of the sun in a mirror only from a certain angle.
+It is refracted ; No, like reflection, this would cause the blue color to bend in one direction, just as we see the blue color in a rainbow only from a certain angle.
+It is scattered ;; Correct.
+
+Air absorbs some of the blue light from the sun.
+That light is then radiated in random directions.
+
+This is called Rayleigh Scattering ; after the English physicist Lord Rayleigh
+[http://en.wikipedia.org/wiki/Rayleigh_scattering Learn more];
+[input];
+

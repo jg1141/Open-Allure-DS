@@ -1,0 +1,15 @@
+clear
+echo Build HTML documentation with Sphinx
+cp ../openallure.cfg .
+if test ! -d source/txt; then 
+  mkdir source/txt; 
+fi
+cp rst/* source/txt/
+cat ../CHANGES.txt  >> source/txt/CHANGES.rst 
+cat ../ethics_notice.txt  >> source/txt/ethics_notice.rst 
+cat ../LICENSE.txt >> source/txt/LICENSE.rst 
+cat ../README.txt >> source/txt/README.rst 
+python dressCfg.py 
+sphinx-build -E -a -b html source html
+
+

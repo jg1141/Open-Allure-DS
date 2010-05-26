@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>chat &mdash; OpenAllure v0.1d16dev (alpha) documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1d16dev (alpha)',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="OpenAllure v0.1d16dev (alpha) documentation" href="../index.html" />
+    <link rel="next" title="responses" href="responses.html" />
+    <link rel="prev" title="openallure" href="openallure.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../modindex.html" title="Global Module Index"
+             accesskey="M">modules</a> |</li>
+        <li class="right" >
+          <a href="responses.html" title="responses"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="openallure.html" title="openallure"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">OpenAllure v0.1d16dev (alpha) documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-chat">
+<h1><cite>chat</cite><a class="headerlink" href="#module-chat" title="Permalink to this headline">¶</a></h1>
+<p>The Natural Language Processing component of open-allure-ds.
+Based on the Chat bot class from NLTK</p>
+<p>TODO: Test the open functionality.
+TODO: Fix the natural language math parsing
+TODO:   - make all test cases pass
+TODO:   - move the math parsing out of the generic responses tuple
+TODO:   - move the math processing out of the respond function</p>
+<dl class="class">
+<dt id="chat.Chat">
+<em class="property">class </em><tt class="descclassname">chat.</tt><tt class="descname">Chat</tt><big>(</big><em>tuples</em>, <em>reflections={}</em><big>)</big><a class="headerlink" href="#chat.Chat" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="chat.Chat.respond">
+<tt class="descname">respond</tt><big>(</big><em>inputString</em><big>)</big><a class="headerlink" href="#chat.Chat.respond" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a response to the users input.</p>
+<p>&#64;type inputString: C{string}
+&#64;param inputString: The string to be mapped
+&#64;rtype: C{string}</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="chat.TestChat">
+<em class="property">class </em><tt class="descclassname">chat.</tt><tt class="descname">TestChat</tt><big>(</big><em>methodName='runTest'</em><big>)</big><a class="headerlink" href="#chat.TestChat" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="chat.TestChat.setUp">
+<tt class="descname">setUp</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChat.setUp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChat.testHello">
+<tt class="descname">testHello</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChat.testHello" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChat.testQuitWorks">
+<tt class="descname">testQuitWorks</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChat.testQuitWorks" title="Permalink to this definition">¶</a></dt>
+<dd>Ask the chatbot to quit</dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChat.testWordLookup">
+<tt class="descname">testWordLookup</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChat.testWordLookup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChat.testWordLookup2">
+<tt class="descname">testWordLookup2</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChat.testWordLookup2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="chat.TestChatMath">
+<em class="property">class </em><tt class="descclassname">chat.</tt><tt class="descname">TestChatMath</tt><big>(</big><em>methodName='runTest'</em><big>)</big><a class="headerlink" href="#chat.TestChatMath" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="chat.TestChatMath.setUp">
+<tt class="descname">setUp</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.setUp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testAddition">
+<tt class="descname">testAddition</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testAddition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testAdditionNumbers">
+<tt class="descname">testAdditionNumbers</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testAdditionNumbers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testAdditionPlus">
+<tt class="descname">testAdditionPlus</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testAdditionPlus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testAdditionWords1">
+<tt class="descname">testAdditionWords1</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testAdditionWords1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testAdditionWords2">
+<tt class="descname">testAdditionWords2</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testAdditionWords2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testMultiply">
+<tt class="descname">testMultiply</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testMultiply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testSubtractionLargeNumbers">
+<tt class="descname">testSubtractionLargeNumbers</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testSubtractionLargeNumbers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testSubtractionSymbol">
+<tt class="descname">testSubtractionSymbol</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testSubtractionSymbol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testSubtractionWords">
+<tt class="descname">testSubtractionWords</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testSubtractionWords" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testSubtractionWords1">
+<tt class="descname">testSubtractionWords1</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testSubtractionWords1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="openallure.html"
+                                  title="previous chapter"><cite>openallure</cite></a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="responses.html"
+                                  title="next chapter"><cite>responses</cite></a></p>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../modindex.html" title="Global Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="responses.html" title="responses"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="openallure.html" title="openallure"
+             >previous</a> |</li>
+        <li><a href="../index.html">OpenAllure v0.1d16dev (alpha) documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2010, John Graves.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.5.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>video &mdash; OpenAllure v0.1d16dev (alpha) documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1d16dev (alpha)',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="OpenAllure v0.1d16dev (alpha) documentation" href="../index.html" />
+    <link rel="next" title="CHANGES.txt" href="../txt/CHANGES.html" />
+    <link rel="prev" title="voice" href="voice.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../modindex.html" title="Global Module Index"
+             accesskey="M">modules</a> |</li>
+        <li class="right" >
+          <a href="../txt/CHANGES.html" title="CHANGES.txt"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="voice.html" title="voice"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">OpenAllure v0.1d16dev (alpha) documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-video">
+<h1><cite>video</cite><a class="headerlink" href="#module-video" title="Permalink to this headline">¶</a></h1>
+<p>video.py
+a component of openallure.py</p>
+<p>Implement webcam image capture and processing</p>
+<p>Copyright (c) 2010 John Graves</p>
+<p>MIT License: see LICENSE.txt</p>
+<dl class="class">
+<dt id="video.GreenScreen">
+<em class="property">class </em><tt class="descclassname">video.</tt><tt class="descname">GreenScreen</tt><a class="headerlink" href="#video.GreenScreen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process to capture average background image and subtract from snapshot image</p>
+<dl class="method">
+<dt id="video.GreenScreen.calibration">
+<tt class="descname">calibration</tt><big>(</big><em>snapshot</em><big>)</big><a class="headerlink" href="#video.GreenScreen.calibration" title="Permalink to this definition">¶</a></dt>
+<dd>Capture 30 background images and average them out.</dd></dl>
+
+<dl class="method">
+<dt id="video.GreenScreen.process">
+<tt class="descname">process</tt><big>(</big><em>snapshot</em><big>)</big><a class="headerlink" href="#video.GreenScreen.process" title="Permalink to this definition">¶</a></dt>
+<dd>Toggles between returning calibration image and processed ( green screen ) image.</dd></dl>
+
+<dl class="method">
+<dt id="video.GreenScreen.threshold">
+<tt class="descname">threshold</tt><big>(</big><em>snapshot</em><big>)</big><a class="headerlink" href="#video.GreenScreen.threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds which pixels are beyond a threshold of the average background and makes them white.</p>
+<p>pygame.transform.threshold( DestSurface,                                                  Surface,                                                      color,                                                        threshold  = ( 0,0,0,0 ),                                       diff_color = ( 0,0,0,0 ),                                       change_return = 1,                                            Surface = None,                                               inverse = False ): return num_threshold_pixels</p>
+<p>Finds which, and how many pixels in a surface are within a threshold of a color.</p>
+<p>It can set the destination surface where all of the pixels not within the threshold are changed to diff_color.
+If inverse is optionally set to True, the pixels that are within the threshold are instead changed to diff_color.</p>
+<p>If the optional second surface is given, it is used to threshold against rather than the specified color.
+That is, it will find each pixel in the first Surface that is within the threshold of the pixel at the same coordinates of the second Surface.</p>
+<p>If change_return is set to 0, it can be used to just count the number of pixels within the threshold if you set.
+If change_return is set to 1, the pixels set in DestSurface will be those from the color.
+If change_return is set to 2, the pixels set in DestSurface will be those from the first Surface.</p>
+<p>You can use a threshold of ( r,g,b,a ) where the r,g,b can have different thresholds. So you could use an r threshold of 40 and a blue threshold of 2 if you like.</p>
+<p>New in pygame 1.8</p>
+<p>Comments:</p>
+<p>November 11, 2009 3:11pm - Anonymous
+This documentation does not seem to match what is currently in 1.8.1.
+Instead: pygame.transform.threshold( DestSurface,                                                          Surface,                                                              color,                                                                threshold  = ( 0,0,0,0 ),                                               diff_color = ( 0,0,0,0 ),                                               change_return = True,                                                 Surface =None ): return num_threshold_pixels</p>
+<p>January 15, 2009 11:36am - Anonymous
+The target surface is first filled with diff_color.
+A pixel is matched if it&#8217;s distance from the color-argument ( or the corresponding pixel from the optional third surface )
+is less than threshold_color ( for every color component ).
+If a pixel is matched, it will be set to color.
+The number of matched pixels is returned.</p>
+<p>So, if color = ( 255,0,0 ), and threshold_color = ( 10,10,10 ), any pixel with value ( r&gt;245, g&lt;10, b&lt;10 ) will be matched.</p>
+<p>From <a class="reference external" href="http://www.pygame.org/docs/ref/transform.html#pygame.transform.threshold">http://www.pygame.org/docs/ref/transform.html#pygame.transform.threshold</a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="video.VideoCapturePlayer">
+<em class="property">class </em><tt class="descclassname">video.</tt><tt class="descname">VideoCapturePlayer</tt><big>(</big><em>processFunction=None</em>, <em>display=None</em>, <em>photos=None</em>, <em>version=None</em>, <em>**argd</em><big>)</big><a class="headerlink" href="#video.VideoCapturePlayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>A VideoCapturePlayer object is an encapsulation of
+the processing and display of a video stream.</p>
+<p>A process can be given (as a function) that is run
+on every frame between capture and display.</p>
+<p>For example a filter function that takes and returns a
+surface can be given. This player will take the webcam image,
+pass it through the filter then display the result.</p>
+<p>If the function takes significant computation time (&gt;1second)
+The VideoCapturePlayer takes 3 images between each, this flushes
+the buffer, ensuring an updated picture is used in the next computation.</p>
+<p>This class uses the pygame.camera module.</p>
+<dl class="method">
+<dt id="video.VideoCapturePlayer.get_and_flip">
+<tt class="descname">get_and_flip</tt><big>(</big><big>)</big><a class="headerlink" href="#video.VideoCapturePlayer.get_and_flip" title="Permalink to this definition">¶</a></dt>
+<dd>Use webcam to take a snapshot, flip it right-to-left, subtract the background ( green screen ) and then display it.</dd></dl>
+
+<dl class="method">
+<dt id="video.VideoCapturePlayer.listen">
+<tt class="descname">listen</tt><big>(</big><big>)</big><a class="headerlink" href="#video.VideoCapturePlayer.listen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="video.VideoCapturePlayer.smile">
+<tt class="descname">smile</tt><big>(</big><big>)</big><a class="headerlink" href="#video.VideoCapturePlayer.smile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="video.VideoCapturePlayer.talk">
+<tt class="descname">talk</tt><big>(</big><big>)</big><a class="headerlink" href="#video.VideoCapturePlayer.talk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="voice.html"
+                                  title="previous chapter"><cite>voice</cite></a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="../txt/CHANGES.html"
+                                  title="next chapter"><cite>CHANGES.txt</cite></a></p>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../modindex.html" title="Global Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../txt/CHANGES.html" title="CHANGES.txt"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="voice.html" title="voice"
+             >previous</a> |</li>
+        <li><a href="../index.html">OpenAllure v0.1d16dev (alpha) documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2010, John Graves.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.5.
+    </div>
+  </body>
+</html>

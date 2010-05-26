@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>text &mdash; OpenAllure v0.1d16dev (alpha) documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1d16dev (alpha)',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="OpenAllure v0.1d16dev (alpha) documentation" href="../index.html" />
+    <link rel="next" title="voice" href="voice.html" />
+    <link rel="prev" title="gesture" href="gesture.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../modindex.html" title="Global Module Index"
+             accesskey="M">modules</a> |</li>
+        <li class="right" >
+          <a href="voice.html" title="voice"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gesture.html" title="gesture"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">OpenAllure v0.1d16dev (alpha) documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-text">
+<h1><cite>text</cite><a class="headerlink" href="#module-text" title="Permalink to this headline">¶</a></h1>
+<p>text.py
+a component of openallure.py</p>
+<p>Collection of functions for rendering text</p>
+<p>Copyright (c) 2010 John Graves</p>
+<p>MIT License: see LICENSE.txt</p>
+<dl class="class">
+<dt id="text.OpenAllureText">
+<em class="property">class </em><tt class="descclassname">text.</tt><tt class="descname">OpenAllureText</tt><big>(</big><em>margins</em><big>)</big><a class="headerlink" href="#text.OpenAllureText" title="Permalink to this definition">¶</a></dt>
+<dd><p>Text rendered to screen in Open Allure</p>
+<dl class="method">
+<dt id="text.OpenAllureText.buildQuestionText">
+<tt class="descname">buildQuestionText</tt><big>(</big><em>question</em><big>)</big><a class="headerlink" href="#text.OpenAllureText.buildQuestionText" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prepare text of question and answers for display and reading aloud:</p>
+<div class="highlight-python"><pre>questionText[0] is question
+questionText[1] is question + answer 1
+questionText[2] is question + answer 1 + answer 2
+etc.
+
+justQuestionText[0] is first (perhaps only) part of question
+justQuestionText[1] is next part of question
+etc.
+
+choiceCount tells how may answers there are</pre>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="text.OpenAllureText.paintText">
+<tt class="descname">paintText</tt><big>(</big><em>screen</em>, <em>justQuestionText</em>, <em>onText</em>, <em>questionText</em>, <em>onAnswer</em>, <em>highlight</em>, <em>stated</em>, <em>choice</em>, <em>colorLevel</em>, <em>colorLevels</em><big>)</big><a class="headerlink" href="#text.OpenAllureText.paintText" title="Permalink to this definition">¶</a></dt>
+<dd><p>Paint words of <strong>justQuestionText</strong> and <strong>questionText</strong> on <strong>screen</strong> with appropriate colors.</p>
+<p>What is appropriate depends on</p>
+<ul class="simple">
+<li>whether the question is <strong>stated</strong> (everything has been read aloud)</li>
+<li>how far along (<strong>onText</strong>) in the <strong>justQuestionText</strong> the reading of the question is</li>
+<li>how far along (<strong>onAnswer</strong>) in the <strong>questionText</strong> the reading of the answers is</li>
+<li>whether a <strong>choice</strong> has been selected</li>
+<li>if touched by <strong>highlight</strong>, the dwellTime-based <strong>colorLevel</strong> (out of  <strong>colorLevels</strong>)</li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="text.OpenAllureText.preRender">
+<tt class="descname">preRender</tt><big>(</big><em>questionText</em>, <em>screenWidth=640</em>, <em>rightMargin=20</em><big>)</big><a class="headerlink" href="#text.OpenAllureText.preRender" title="Permalink to this definition">¶</a></dt>
+<dd>Pre-render text to find regions where it will be placed within screen with <strong>screenWidth</strong> and right margin of <strong>rightMargin</strong></dd></dl>
+
+<dl class="method">
+<dt id="text.OpenAllureText.writewrap">
+<tt class="descname">writewrap</tt><big>(</big><em>s</em>, <em>font</em>, <em>rect</em>, <em>color</em>, <em>text</em><big>)</big><a class="headerlink" href="#text.OpenAllureText.writewrap" title="Permalink to this definition">¶</a></dt>
+<dd><p>write wrapped text</p>
+<p>Copied from PyGame Utilities</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="gesture.html"
+                                  title="previous chapter"><cite>gesture</cite></a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="voice.html"
+                                  title="next chapter"><cite>voice</cite></a></p>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../modindex.html" title="Global Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="voice.html" title="voice"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gesture.html" title="gesture"
+             >previous</a> |</li>
+        <li><a href="../index.html">OpenAllure v0.1d16dev (alpha) documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2010, John Graves.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.5.
+    </div>
+  </body>
+</html>
