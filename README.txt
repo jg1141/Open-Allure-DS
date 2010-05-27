@@ -39,3 +39,4 @@ Contributors
 ============
 John Graves, <john.graves@aut.ac.nz>
 Brian Thorne, <brian.thorne@canterbury.ac.nz>
+Victor Miclovich, <vm@coders-borders.org>
