@@ -1,71 +1,89 @@
+# -*- coding: utf-8 -*-
 """
 voice.py
 a component of openallure.py
 
-Collection of functions for rendering text-to-speech
+Function for rendering text-to-speech
 
-Copyright (c) 2010 John Graves
+Copyright (c) 2011 John Graves
 
 MIT License: see LICENSE.txt
-
-TODO: Add standalone tests for text-to-speech modules.
 """
 
+from configobj import ConfigObj
 import os
-import ConfigParser
-import pygame
-
-# only allow useDragonfly if dragonfly module can be imported
-allowUseDragonfly = True
-try:
-    import dragonfly
-except ImportError:
-    allowUseDragonfly = False
+import subprocess
+import sys
 
 class Voice( object ):
-    """Text-to-speech Functionality ( optional )"""
+    """Text-to-speech class"""
     def __init__( self ):
-        """Initialize flag for available text-to-speech engine
-
-        TODO: Make this dynamic rather than hardcoded.
-        """
-        config = ConfigParser.RawConfigParser()
-        config.read( 'openallure.cfg' )
-        if allowUseDragonfly:
-            self.useDragonfly = eval( config.get( 'Voice', 'useDragonfly' ) )
+        """Initialize flags for text-to-speech engines"""
+        self.useEspeak = 0
+        self.useSay = 0
+        self.useSayStatic = 0
+        config = ConfigObj("openallure.cfg")
+        if sys.platform == 'darwin':
+            self.useSay = eval( config['Voice']['useSay'] )
+        elif sys.platform == 'win32':
+            self.useSayStatic = eval( config['Voice']['useSayStatic' ] )
         else:
-            self.useDragonfly = False
-            wantedToUseDragonfly = eval( config.get( 'Voice', 'useDragonfly' ) )
-            if wantedToUseDragonfly:
-                print "Dragonfly module not installed. Download from http://code.google.com/p/dragonfly/"
-
-        self.useEspeak = eval( config.get( 'Voice', 'useEspeak' ) )
-        self.useSay    = eval( config.get( 'Voice', 'useSay' ) )
-        self.language  = config.get( 'Voice', 'language' )
+            self.useEspeak = eval( config['Voice']['useEspeak'] )
+        self.language = config['Voice']['language'] 
         if self.language:
             self.language = self.language + " "
+        self.pid_status = 0
 
-    def speak( self, phrase ):
-       """Say or print phrase using available text-to-speech engine or stdout"""
+    def speak( self, phrase, systemVoice ):
+        """Say or print phrase using text-to-speech engine or stdout.
+        
+        An empty phrase returns without calling the speech engine.
+        
+        espeak (engine) takes an optional Voice:language parameter from openallure.cfg.
+        
+        say (engine) takes a systemVoice where selected voice which may come from 
+        Options:language in openallure.cfg or [systemVoice=xx] override in a script.
+        """
+        phrase = phrase.strip()
+        if len(phrase) == 0:
+            return
 
-       if self.useDragonfly:
-           e = dragonfly.get_engine()
-           e.speak( phrase.encode( 'utf-8' ) )
-       elif self.useEspeak:
-           os.system( 'espeak -s150 "' + self.language + phrase.encode( 'utf-8' ) + '"' )
-       elif self.useSay:
-           os.system( 'say "' + self.language + phrase.encode( 'utf-8' ) + '"' )
-       else:
-           print( phrase.encode( 'utf-8' ) )
-           # Allow time for user to move hand down
-           pygame.time.wait( 500 )
+        if self.useEspeak:
+            subprocess.Popen( ['espeak', " -s150 " + self.language + \
+                               phrase + '"' ] )
+        elif self.useSay:
+            commandLine = 'say -v ' + systemVoice + ' "' + phrase + '"' 
+            if self.pid_status == 0:
+                self.pid_status = subprocess.Popen(commandLine,shell=True).pid
+            else:
+                # wait for prior speaking to finish
+                try:
+                    self.pid_status = os.waitpid(self.pid_status, 0)[1]
+                except:
+                    pass
+                self.pid_status = subprocess.Popen(commandLine,shell=True).pid
+                
+        elif self.useSayStatic:
+            try:
+                subprocess.call(["SayStatic ", \
+                                 phrase], shell=True)
+            except OSError, e:
+                print("Call to SayStatic failed:", e)
+                
+        else:
+            print(phrase)
 
-def test_voice():
+def testVoice():
     '''
     Create a Voice instance and check that it works
     '''
     voice = Voice()
-    voice.speak("Hello World")
+    if sys.platform == 'darwin':
+        voice.speak(u"This is a test", u"Alex")
+        voice.speak(u"Questa è una prova", u"Chiara")
+        voice.speak(u"Este é um teste", u"Marcia")
+    else:
+        voice.speak("This is a test", u"")
 
 if __name__ == "__main__":
-    test_voice()
+    testVoice()

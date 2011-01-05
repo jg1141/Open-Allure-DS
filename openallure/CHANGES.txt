@@ -1,5 +1,62 @@
 Change history::
 
+  v0.1d32, 31 January 2011
+    Fixed bugs with mouse events. Lowercase tags. 
+    Enhanced qsequence and oadb reports
+
+  v0.1d31, 31 December 2010
+    Added gettext for internationalization
+    Responses also have a translated version. For example, responses_pt.cfg for Portuguese.
+    
+  v0.1d30, 31 December 2010
+    Platform specific text-to-speech engine selection
+    QSequence parses text file, NING, Wikia, Etherpad and Google wiki
+    
+  v0.1d29, 28 December 2010
+    Ctrl+V for paste now also works in Windows
+    Clean (no semi-colon) scripts
+    Access chat history with up and down arrows
+    
+  v0.1d28, 28 December 2010
+    Start with selected script from command line
+    Allow typing of tilde
+
+  v0.1d27, 11 December 2010
+    Added Ctrl + R for refresh
+    Added show source command (for Mac)
+
+  v0.1d26, 2 November 2010
+    Worked in graph.py for display of question sequence as graph calling GraphViz
+    Added support for buzhug database to track progress through question sequence
+
+  v0.1d25, 19 October 2010
+    Stripped out video and voice leaving only text-to-speech
+
+  v0.1d23, 6 October 2010
+    Resize text with Ctrl+(+/-)
+    Paste with Ctrl+V in OSX
+    Force input with Ctrl+I
+
+  v0.1d22, 4 October 2010
+    Fade-in text
+
+  v0.1d20, 1 August 2010
+    Read questions directly from Etherpad
+    Extend answers with underscores for ease of selection at right side of screen
+
+  v0.1d19, 11 June 2010
+    Shadow interface testing
+
+  v0.1d18, 17 May 2010
+    Comments marked with # are now ignored in scripts
+    Answers ending with ... are silenced (for example, Continue ... )
+    Converted responses.py into responses.cfg
+    Added in-script rule parsing to qsequence.py with regular expression by example
+      so scripts can now specify both FIXED and AD HOC responses. See example in new_rules.txt
+
+  v0.1d17, 13 May 2010
+    Replaced web browser selection in configuration with import webbrowser
+
   v0.1d16, 12 May 2010
     Added tags to script syntax so questions can be inserted in a sequence without renumbering
     Pulled chat.py and responses.py out of openallure.py
