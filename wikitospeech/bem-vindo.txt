@@ -1,0 +1,95 @@
+# -*- coding: utf-8 -*-
+# Open Allure Welcome Script
+# Version 20110104 Portuguese
+# (c) 2011 Fabio Teixeira
+# http://openallureds.org
+
+[language=pt]
+Este software permite que você fale com a voz do computador.
+[próximo];;
+
+Seu computador está lendo um script.
+Você pode escrever seu próprio script para que o computador fale o que você quiser.
+ 
+O script também pode abrir páginas da web e lê-las.
+
+Pressione 1 para aprender a escrever scripts;;
+ou pressione 2 para obter mais informações gerais;[info]
+[entrada];;
+
+[Aprender]
+Use seu editor de texto
+para abrir o arquivo chamado start.txt
+
+Volte e pressione 1 quando estiver pronto;[editar]
+ou pressione 2 se você precisar de mais ajuda;;
+[entrada];;
+
+Precisa de ajuda com alguma coisa?
+
+Encontrando o arquivo chamado start.txt;[encontre]
+ou iniciando um editor de texto;;
+[entrada];;
+
+OK.
+Aqui estão algumas instruções para iniciar o seu editor de texto:
+Clique no ícone lupa do Spotlight no canto superior direito da tela
+digite TextEdit e pressione a tecla Enter.
+
+Volte e pressione 1 após o início do TextEdit;2
+ou pressione 2 se você precisar de mais ajuda;;
+[entrada];;
+
+Precisa de ajuda com alguma coisa?
+
+1. Encontrar o ícone do Spotlight;;
+2. O editor de texto TextEdit não iniciou;;
+[entrada];;
+
+Alguns computadores Apple pode não ter o Spotlight ou TextEdit.
+Você pode usar qualquer editor de texto capaz de abrir e salvar um arquivo de texto puro.
+
+Volte e pressione 1, após o seu início;2
+ou pressione 2 se você precisar de mais ajuda;;
+[entrada];;
+
+[Encontrar]
+Parabéns por iniciar seu editor de texto
+e retornar aqui.
+Você deve encontrar o arquivo start.txt
+no diretório do Open Allure.
+Volte para o seu editor e tente abri-lo agora.
+
+Volte e pressione 1 quando tudo der certo;;
+[entrada];;
+
+[Editar]
+Leia as informações sobre o formato de script.
+Veja como você pode criar um diálogo
+escrevendo uma pergunta ou uma declaração
+seguido por uma ou mais respostas.
+
+Volte e pressione 1 quando terminar a leitura;;
+[entrada];;
+
+Se você seguiu as instruções,
+agora você deve ter uma cópia modificada
+de start.txt salvo em seu computador.
+Tipo
+aberto start.txt 
+e pressione Enter:
+
+[entrada];;
+
+[Info]
+A idéia do Open Allure é fazer para as instruções o que o Wikipedia fez com referências.
+ 
+Usando scripts criado colaborativamente nas páginas wiki,
+Open Allure usa "text to speech" para falar por meio de procedimentos.
+
+Quando a interação é necessária, o script pode oferecer opções e fazer uma pausa.
+
+Gostaria de aprender a escrever um script?
+
+Sim;[Aprender]
+Não;; OK. Obrigado pelo seu interesse em Open Allure.

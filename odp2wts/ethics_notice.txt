@@ -1,0 +1,4 @@
+NOTE: Data about and involved in the development work is being recorded and
+collected for research purposes from your participation in this open source
+project and will be used in a PhD study of open source software development.
+Participation by individuals under the age of 21 is prohibited.

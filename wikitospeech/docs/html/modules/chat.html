@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>chat &mdash; OpenAllure v0.1d29dev (alpha) documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1d29dev (alpha)',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="OpenAllure v0.1d29dev (alpha) documentation" href="../index.html" />
+    <link rel="next" title="qsequence" href="qsequence.html" />
+    <link rel="prev" title="openallure" href="openallure.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../modindex.html" title="Global Module Index"
+             accesskey="M">modules</a> |</li>
+        <li class="right" >
+          <a href="qsequence.html" title="qsequence"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="openallure.html" title="openallure"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">OpenAllure v0.1d29dev (alpha) documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-chat">
+<h1><cite>chat</cite><a class="headerlink" href="#module-chat" title="Permalink to this headline">¶</a></h1>
+<p>The Natural Language Processing component of open-allure-ds.
+Based on the Chat bot class from NLTK</p>
+<p>Modify the bottom of this file to run doc tests or to hold a conversation.</p>
+<p>TODO:</p>
+<div class="highlight-python"><pre>Fix the natural language math parsing
+- make all test cases pass</pre>
+</div>
+<dl class="class">
+<dt id="chat.Chat">
+<em class="property">class </em><tt class="descclassname">chat.</tt><tt class="descname">Chat</tt><big>(</big><em>tuples</em>, <em>reflections={}</em><big>)</big><a class="headerlink" href="#chat.Chat" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="chat.Chat.respond">
+<tt class="descname">respond</tt><big>(</big><em>inputString</em><big>)</big><a class="headerlink" href="#chat.Chat.respond" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a response to the users input.</p>
+<p>&#64;type inputString: C{string}
+&#64;param inputString: The string to be mapped
+&#64;rtype: C{string}</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="chat.TestChat">
+<em class="property">class </em><tt class="descclassname">chat.</tt><tt class="descname">TestChat</tt><big>(</big><em>methodName='runTest'</em><big>)</big><a class="headerlink" href="#chat.TestChat" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="chat.TestChat.setUp">
+<tt class="descname">setUp</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChat.setUp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChat.testHi">
+<tt class="descname">testHi</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChat.testHi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChat.testOpen">
+<tt class="descname">testOpen</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChat.testOpen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChat.testOpen1">
+<tt class="descname">testOpen1</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChat.testOpen1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChat.testQuit">
+<tt class="descname">testQuit</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChat.testQuit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChat.testQuit1">
+<tt class="descname">testQuit1</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChat.testQuit1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChat.testReturn">
+<tt class="descname">testReturn</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChat.testReturn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChat.testReturn1">
+<tt class="descname">testReturn1</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChat.testReturn1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="chat.TestChatMath">
+<em class="property">class </em><tt class="descclassname">chat.</tt><tt class="descname">TestChatMath</tt><big>(</big><em>methodName='runTest'</em><big>)</big><a class="headerlink" href="#chat.TestChatMath" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="chat.TestChatMath.setUp">
+<tt class="descname">setUp</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.setUp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testAdditionAnd">
+<tt class="descname">testAdditionAnd</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testAdditionAnd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testAdditionNumbers">
+<tt class="descname">testAdditionNumbers</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testAdditionNumbers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testAdditionPlus">
+<tt class="descname">testAdditionPlus</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testAdditionPlus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testAdditionTo">
+<tt class="descname">testAdditionTo</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testAdditionTo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testAdditionWords1">
+<tt class="descname">testAdditionWords1</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testAdditionWords1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testAdditionWords2">
+<tt class="descname">testAdditionWords2</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testAdditionWords2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testDivide">
+<tt class="descname">testDivide</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testDivide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testMultiply">
+<tt class="descname">testMultiply</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testMultiply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testSubtractionLargeNumbers">
+<tt class="descname">testSubtractionLargeNumbers</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testSubtractionLargeNumbers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testSubtractionSymbol">
+<tt class="descname">testSubtractionSymbol</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testSubtractionSymbol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testSubtractionWords">
+<tt class="descname">testSubtractionWords</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testSubtractionWords" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testSubtractionWords1">
+<tt class="descname">testSubtractionWords1</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testSubtractionWords1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testhide">
+<tt class="descname">testhide</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testhide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testhide1">
+<tt class="descname">testhide1</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testhide1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testhideResp">
+<tt class="descname">testhideResp</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testhideResp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testhideText">
+<tt class="descname">testhideText</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testhideText" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testhidelabels">
+<tt class="descname">testhidelabels</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testhidelabels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testlist">
+<tt class="descname">testlist</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testlist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testlist1">
+<tt class="descname">testlist1</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testlist1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testlist2">
+<tt class="descname">testlist2</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testlist2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testlist3">
+<tt class="descname">testlist3</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testlist3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testlist4">
+<tt class="descname">testlist4</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testlist4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testmeta1">
+<tt class="descname">testmeta1</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testmeta1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testmeta2">
+<tt class="descname">testmeta2</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testmeta2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testmeta5">
+<tt class="descname">testmeta5</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testmeta5" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testreset">
+<tt class="descname">testreset</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testreset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testreset2">
+<tt class="descname">testreset2</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testreset2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testshow">
+<tt class="descname">testshow</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testshow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testshow1">
+<tt class="descname">testshow1</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testshow1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testshow2">
+<tt class="descname">testshow2</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testshow2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testshowResp">
+<tt class="descname">testshowResp</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testshowResp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testshowText">
+<tt class="descname">testshowText</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testshowText" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="chat.TestChatMath.testshowlabels">
+<tt class="descname">testshowlabels</tt><big>(</big><big>)</big><a class="headerlink" href="#chat.TestChatMath.testshowlabels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="openallure.html"
+                                  title="previous chapter"><cite>openallure</cite></a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="qsequence.html"
+                                  title="next chapter"><cite>qsequence</cite></a></p>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../modindex.html" title="Global Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qsequence.html" title="qsequence"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="openallure.html" title="openallure"
+             >previous</a> |</li>
+        <li><a href="../index.html">OpenAllure v0.1d29dev (alpha) documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2010, John Graves.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.5.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+[path=static/test]
+Slide1.JPG
+Some short comments.
+
+Slide2.JPG
+Some longer comments on slide two. We want to know whether the third slide will show up at the correct time. Even after going for many seconds on slide two.
+
+[questions=on]
+Which next?
+Slide 3;; You picked slide 3
+Or Slide 4;;; You selected slide 4
+
+
+Slide3.JPG
+[questions=off]
+Slide 3. And that brings us almost to the end of our demonstration.
+
+Slide4.JPG
+[questions=off]
+Slide 4. And that brings us right to the end of our demonstration.
+

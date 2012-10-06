@@ -1,0 +1,10 @@
+Change history::
+  v0.1.28 28 November 2011 Mac/Windows/Linux all produce video with appropriate dependencies installed
+  v0.1.15 5 September 2011 More unicode character fixes in joinContents
+  v0.1.12 1 September 2011 Direct to video output for Windows only
+  v0.1.11 31 August 2011 Continue link steps down into subdirectory correctly
+  v0.1.10 30 August 2011 Added SoX, SoX libraries and reference to SoX in LICENSE.txt
+        .ogg files should be now be created (so FireFox and others will play presentations)
+  v0.1.8 24 August 2011 Strip comments from convert.bat
+  v0.1.7 22 August 2011 Rearranged order of .mp3/.ogg audio file tags for playing in Safari/Chrome/Firefox and IE
+  v0.1.0 19 July 2011 Created .app including output to .htm files with both <audio> and <embed> tags

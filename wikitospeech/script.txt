@@ -1,0 +1,13 @@
+test\Slide1.PNG
+First slide notes
+
+[questions=on]
+There must be something different.
+Yes ;;
+No ;
+
+[questions=off]
+
+test\Slide2.PNG
+Second slide notes
+

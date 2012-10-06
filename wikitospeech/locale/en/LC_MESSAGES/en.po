@@ -1,0 +1,15 @@
+# Open Allure English (Nothing to Translate)
+# Copyright (C) 2011 John Graves
+# FIRST AUTHOR <john.graves@aut.ac.nz>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Allure 0.1d31\n"
+"POT-Creation-Date: 2011-01-01 12:10+NZDT\n"
+"PO-Revision-Date: 2011-01-01 12:10+NZDT\n"
+"Last-Translator: John Graves <john.graves@aut.ac.nz>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"

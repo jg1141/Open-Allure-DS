@@ -1,0 +1,61 @@
+When Open Allure has problems reading a script,
+the problem may be due to the language setting.
+
+You can change your language setting with 
+the configure command (Mac OSX) 
+or by modifying the openallure.cfg configuration file
+which is a plain text file.  
+Otherwise,
+
+Modify the script;;
+Check vocabulary;[vocabulary]
+[input];
+
+If the script has an error, 
+you will need to fix it 
+by editing the script 
+or a copy of the script.
+How you do this depends on whether
+
+the script is a local text file;[local]
+or is on the internet.;;
+
+To edit a script on the internet,
+open the script in your web browser.
+You should then be able to edit in place
+(on a wiki or Etherpad)
+or at least copy the script 
+(from a blog post, for example).
+
+If you can't edit in place, 
+use copy and paste 
+to get a copy into your text editor 
+and save it as a local text file.
+
+[local]
+Working with a local text file
+requires saving the file as plain text.
+Not as Rich Text Format .rtf 
+or as a word processing document,
+but just plain text, 
+with the extension .txt
+
+It is helpful to know 
+how an Open Allure script 
+is supposed to be laid out.
+You can find some documentation and examples
+
+[http://code.google.com/p/open-allure-ds/wiki/SeparateContentFileSyntax here];;
+or check the vocabulary;;
+
+[vocabulary]
+Open Allure works using a set of rules 
+or vocabulary
+in a text file called responses.cfg 
+(or similar depending on the language).
+
+You can get a list of the rules 
+with the vocabulary command (Mac OSX).
+
+[input];
+

@@ -1,0 +1,7 @@
+SlideSpeech and utility software SlideSpeech from ODP for Mac
+
+Download the .dmg and open the SlideSpeech package to install two programs:
+
+SlideSpeech - play wiki-based scripts using the voice selected in Mac System Preferences. Copy/paste the address of a script into the input area. For example: http://code.google.com/p/wiki-to-speech/wiki/HiKim
+
+SlideSpeech from ODP - utility to convert an open document presentation (ODP) file into a script, a zip file, a slideshow with voice over and a video using the voice selected in Mac System Preferences.

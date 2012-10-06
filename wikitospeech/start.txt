@@ -1,0 +1,45 @@
+# Getting started with Open Allure
+# start.txt
+# (c) 2011 John Graves
+#
+# Everything you type into an Open Allure script
+# is something the computer might say
+# (except for comments -- like the line you are reading now -- or links).
+#
+# Here is an example script which offers a tour of some YouTube music videos:
+
+Do you want some good recommendations for some great music?
+
+One good band, if you like bluegrass, is Old Crow Medicine Show.
+Check out their song,
+Wagon Wheel
+http://www.youtube.com/watch?v=1gX1EP6mG-E
+or just continue ...;;
+
+Next, listen to Ryan Adams'
+Oh My Sweet Carolina
+http://www.youtube.com/watch?v=eMZYRvDvgT4
+or not ...;;
+
+Last, but not least, try out one of these from The Avett Brothers
+Paranoia in B Flat Major
+http://www.youtube.com/watch?v=-4pjrmH967c
+If its The Beaches
+http://www.youtube.com/watch?v=kVtkOUJhpcA
+
+Hope you enjoyed the music.
+Press the up arrow to recall your last command.
+"return"
+will take you back to your most recent prior script.
+
+# Run this script with the command
+#
+#     open start.txt
+#
+# The script above is also available without all these comments as music.txt
+#
+# If you want to make a different script, modify this file,
+# save it under another name and open the new file in Open Allure.
+# For example, save to myScript.txt then run your new script with
+#
+#     open myScript.txt

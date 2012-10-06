@@ -1,0 +1,280 @@
+# Open Allure Welcome Script
+# Version 20101004 for Windows
+# (c) 2011 John Graves
+# http://openallureds.org
+
+This software allows you to talk using the computer's voice.
+[next] ;;
+
+Your computer is reading a script.
+You can write your own script to make computers say whatever you like.
+
+The script can also open web pages and talk about them.
+
+Press 1 to learn how to write scripts ;;
+Press 2 to learn how to navigate ;[navigate]
+or press 3 for more general information ;[info]
+[input] ;;
+
+[learn]
+Use your text editor
+to open the file called 
+start.txt
+
+Come back and press 1 when you are ready ;[edit]
+or press 2 if you need more help ;;
+[input] ;;
+
+What do you need help with?
+
+Finding the file called start.txt ;[find]
+or starting a text editor ;;
+[input] ;;
+
+OK.
+Here are some instructions for starting your text editor (Mac only):
+Click the Spotlight magnifying glass icon 
+in the upper right corner of your screen
+type 
+"TextEdit"
+and press the Enter key.
+
+Come back and press 1 after TextEdit starts ;2
+or press 2 if you need more help ;;
+[input] ;;
+
+What do you need help with?
+
+1. Finding the Spotlight icon ;;
+2. The TextEdit text editor did not start ;;
+[input] ;;
+
+Some Apple computers may not have Spotlight or TextEdit.
+You can use any text editor 
+capable of opening and saving a plain text file.
+
+Come back and press 1 after your editor starts ;;
+[input] ;;
+
+[find]
+Give yourself credit for starting your text editor
+and returning here.
+You should find the file 
+start.txt
+in the directory with Open Allure.
+Switch back to your editor and try to open it now.
+
+Come back and press 1 when you are successful ;;
+[input] ;;
+
+[edit]
+Read the script and the comments.
+Notice how you can create a link
+by placing the web address
+on the next line 
+immediately after the words you want to use for the link.
+
+Come back and press 1 when you are done reading ;;
+[input] ;;
+
+If you followed the directions,
+you should now have a modified copy
+of start.txt saved on your computer.
+Type
+open myScript.txt
+and press Enter:
+
+[input] ;;
+
+[info]
+Open Allure aims to do for instructions what Wikipedia has done for references.
+
+Using scripts collaboratively created on wiki pages,
+Open Allure uses text-to-speech to talk through procedures.
+
+When interaction is required, the script can offer choices and pause.
+
+Would you like to learn to write a script?
+
+Yes ;[learn]
+No ;;  OK. 
+
+[navigate]
+Navigating in Open Allure can be a simple matter of following the script.
+
+Press 1 for the first choice
+if you are offered several choices.
+Press 2 for the second choice
+and so on.
+
+Alternatively, you can point to the choice you want 
+and click on it.
+
+You may need to open different scripts, 
+but this is pretty easy.
+Use the command 
+"open" 
+followed by the name or location of the script.
+
+For example, you could open this script with
+"open welcome.txt"
+or,
+since all local script files end in .txt,
+you can leave off the .txt and just enter
+"open welcome"
+
+Continue ...;;
+[input];
+
+If the script you want is on the internet,
+copy the address to your computer clipboard
+with Control + C or Command + C (on a Mac),
+then type "open", 
+a space,
+and press Control + V to paste it into Open Allure.
+Finally, press Enter.
+
+Continue ...;;
+[input];
+
+If you want to back up and have something repeated,
+press the left arrow key.
+
+[searching]
+You have probably grown used to the idea
+of typing a few words into Google
+and having something relevant show up.
+You can do Google searches from within Open Allure
+by entering "search" followed by your search words.
+
+But let's move on to searching within a script;;
+[input];;
+
+The Open Allure Project aims to deliver something even simpler than Google's searches.
+
+You should eventually be able to just speak a few words
+and have the system start speaking back 
+using a relevant script
+or some part of the script you are working with.
+
+For now, 
+you are limited to typing in your commands,
+but earlier versions for Windows accepted voice inputs.
+
+[http://www.youtube.com/watch?v=tfKTk6rgWsA Check it out here on YouTube];;
+Continue ...;;
+
+There are four levels of command in Open Allure.
+The top level commands provide core functionality
+like "open" and "exit".
+If you want to back up and have something repeated,
+you can use the top level commands
+"prior" or "go back"
+but the left arrow key is easier.
+
+Continue ...
+[input];
+
+The next level of commands are coded in the scripts,
+so Open Allure can dynamically change the words and phrases it recognizes.
+
+For example, a script could have a rule that says,
+when the input is 
+"Greetings"
+reply with "Hello. How are you?"
+
+[second level]
+This second level could be developed 
+to recognize key words in a question
+and guide you appropriately.
+
+For example, a rule could say, 
+when the input includes the words 
+"get around" or "find my way"
+then jump to the section of the script on navigation.
+
+Other parts of the input can be ignored,
+so 
+"how do i get around?"
+would be recognized by the rule.
+You can try this now, if you like.
+
+Continue ...;
+[input];
+
+The third level of command is a subject heading search.
+
+If the input doesn't match any other rules,
+Open Allure checks to see if there is a match with a tag in the current script.
+
+[tag back]
+If you are brave, you can try using this command twice now.
+First enter "navigate" to jump back to the start of this section.
+Then enter "tag back" to jump back here.
+
+Continue ...;;
+[input];
+
+The final level of command is just a full text search of the script, 
+so if you want to find the first time
+"Greetings"
+is used, just enter Greetings
+and Open Allure will jump there.
+
+Continue at tag "keys" ...
+[input];
+
+[keys]
+Open Allure scripts offer frequent opportunities for input.
+
+The goal is for the interaction to be like a conversation.
+
+If you see "[next]" on the screen,
+you can start typing 
+and interrupt the script.
+
+If you don't see "[input]" and want to input some command,
+press Control + I to force input.
+
+You can scroll backward through a history of your inputs 
+by pressing the up arrow key.
+Scroll forward in your input history 
+with the down arrow key.
+
+Continue ...;
+[input];
+
+When you have interrupted a script 
+but want to get back to it,
+use the "return" command.
+
+Try this now by pressing Control + I, then type "return" and Enter.;;
+Continue ...;;
+
+That's all for navigation at the moment.
+It might be interesting for you to try the 
+"show source"
+command now (Mac only)
+to see how this script looks.
+
+Or just enter "learn" 
+to learn about writing scripts.
+
+[input];
+
+[text]
+[[saluations]]
+example="salutations"
+reply="""Hello.
+How are you?;[welcome.txt]
+[input];"""
+
+[link]
+[[second level]]
+re=((.*)get around(.*)|(.*)find my way(.*))
+
+
+
+
+
+

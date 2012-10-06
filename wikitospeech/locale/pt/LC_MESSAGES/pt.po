@@ -1,0 +1,127 @@
+# Open Allure Portuguese
+# Copyright (C) 2011 John Graves
+# FIRST AUTHOR <john.graves@aut.ac.nz>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Allure 0.1d31\n"
+"POT-Creation-Date: 2010-12-31 10:12+NZDT\n"
+"PO-Revision-Date: 2010-12-31 15:32+NZDT\n"
+"Last-Translator: John Graves <john.graves@aut.ac.nz>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+#: openallure.py:169
+msgid  "       Welcome to the Open Allure Dialog System."
+msgstr "       Bem-vindo ao Sistema Open Allure diálogo."
+
+#: openallure.py:171
+msgid  "       Keys:"
+msgstr "       Teclas:"
+
+#: openallure.py:172
+msgid  "           Escape quits"
+msgstr "           Escape sai"
+
+#: openallure.py:173
+msgid  "           Ctrl+I force input"
+msgstr "           Ctrl+I força de entrada"
+
+#: openallure.py:174
+msgid "           Ctrl+R refresh"
+msgstr "           Ctrl+R atualização"
+
+#: openallure.py:175
+msgid "           Ctrl+V paste"
+msgstr "           Ctrl+V colar"
+
+#: openallure.py:176
+msgid "           F6 debug"
+msgstr "           F6 depurar"
+
+#: openallure.py:178
+msgid "       Commands:"
+msgstr "       Comandos:"
+
+#: openallure.py:179
+msgid "           exit"
+msgstr "           saír"
+
+#: openallure.py:180
+msgid "           open <filename or url>"
+msgstr "           aberto <nome do arquivo o URL>"
+
+#: openallure.py:181
+msgid "           quit"
+msgstr "           parar"
+
+#: openallure.py:194
+msgid "           return (resumes at last question)"
+msgstr "           retorno (recomeça na última pergunta)"
+
+#: openallure.py:182
+msgid "           show source (Mac only)"
+msgstr "           revelar fonte (somente Mac)"
+
+#: openallure.py:256
+msgid "Input"
+msgstr "Entrada"
+
+#: openallure.py:257
+msgid "[input];"
+msgstr "[entrada];"
+
+#: openallure.py:786
+msgid "You have reached the end. Goodbye."
+msgstr "Você chegou ao fim. Tchau."
+
+#: qsequence.py:433 qsequence.py:486
+msgid "[next]"
+msgstr "[próximo]"
+
+#: qsequence.py:440 qsequence.py:480
+msgid "[input]"
+msgstr "[entrada]"
+
+#: qsequence.py:448
+msgid "Language is %s"
+msgstr "A linguagem é %s"
+
+#: qsequence.py:583
+msgid "What now?"
+msgstr "E agora?"
+
+#: chat.py:128
+msgid "Confirm"
+msgstr "Confirme"
+
+#: chat.py:128
+msgid "Open "
+msgstr "Aberto "
+
+#: chat.py:288
+msgid "Sorry, I don't understand that. What now?"
+msgstr "Desculpe, eu não entendo isso. E agora?"
+
+#: qsequence.py:252
+msgid "Hmmm. It seems "
+msgstr "Hmmm. Parece "
+
+#: qsequence.py:252
+msgid "does not have a script"
+msgstr "não tem um script"
+
+#: qsequence.py:253
+msgid "marked with <pre> </pre>."
+msgstr "marcados com <pre> </pre>."
+
+#: qsequence.py:273
+msgid "Well ... It seems "
+msgstr "Bem ... Parece "
+
+#: qsequence.py:273
+msgid "could not be opened."
+msgstr "não pôde ser aberto."
