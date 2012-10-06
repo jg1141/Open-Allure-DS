@@ -1,6 +1,0 @@
-If you would like to learn
-how to author Open Allure scripts
-
-[http://code.google.com/p/open-allure-ds/wiki/SeparateContentFileSyntax here is documentation];;
-[http://www.youtube.com/watch?v=wiVtCTfa59U here is a video];;
-[input];
